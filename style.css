@@ -1,0 +1,55 @@
+
+.header {
+    background-color: #383838;
+    height: 250px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.header__title {
+    color: blanchedalmond;
+    font-weight: lighter;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.text-box__area {
+    height: auto;
+    resize: vertical;
+    display: block;
+    width: 100%;
+    margin-top: .5rem;
+    background-color: #f5f5f5;
+}
+
+.text-box__footer-counters {
+    margin-top: .5rem;
+}
+
+.chars-counters {
+    display: flex;
+    min-width: 600px;
+}
+
+.chars-counters__counter {
+    margin-right: 3em;
+}
+
+.chars-counters__value {
+    display: inline-block;
+    color: blanchedalmond;
+    background-color: #5db367;
+    border-radius: 10%;
+    padding: .2em;
+    min-width: 1.3em;
+    height: 1.3em;
+    text-align: center;
+}
+
+.footer {
+    margin-top: 50px;
+}

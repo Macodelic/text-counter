@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Подсчет символов</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">Посчитать количество символов в тексте</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="text-box">
+                <textarea class="text-box__area" name="user-text" rows="10" placeholder="Вставте текст..."></textarea>
+                <div class="text-box__footer">
+                    <div class="text-box__footer-counters">
+                        <div class="chars-counters">
+                            <div class="chars-counters__counter">
+                                <span class="chars-counters__text">Всего символов:</span>
+                                <div class="chars-counters__value chars-counters__value--total"> 0</div>
+                            </div>
+                            <div class="chars-counters__counter">
+                                <span class="chars-counters__text">Без пробелов:</span>
+                                <div class="chars-counters__value chars-counters__value--nospaces"> 0</div>
+                            </div>
+                            <div class="chars-counters__counter">
+                                <span class="chars-counters__text">Количество слов:</span>
+                                <div class="chars-counters__value chars-counters__value--words"> 0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
