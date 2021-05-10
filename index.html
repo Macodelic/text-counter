@@ -8,40 +8,30 @@
     <title>Подсчет символов</title>
 </head>
 <body>
-    <header class="header">
+    <main class="main-area">
         <div class="container">
-            <h1 class="header__title">Посчитать количество символов в тексте</h1>
-        </div>
-    </header>
-    <main>
-        <div class="container">
-            <div class="text-box">
-                <textarea class="text-box__area" name="user-text" rows="10" placeholder="Вставте текст..."></textarea>
-                <div class="text-box__footer">
-                    <div class="text-box__footer-counters">
-                        <div class="chars-counters">
-                            <div class="chars-counters__counter">
-                                <span class="chars-counters__text">Всего символов:</span>
-                                <div class="chars-counters__value chars-counters__value--total"> 0</div>
-                            </div>
-                            <div class="chars-counters__counter">
-                                <span class="chars-counters__text">Без пробелов:</span>
-                                <div class="chars-counters__value chars-counters__value--nospaces"> 0</div>
-                            </div>
-                            <div class="chars-counters__counter">
-                                <span class="chars-counters__text">Количество слов:</span>
-                                <div class="chars-counters__value chars-counters__value--words"> 0</div>
-                            </div>
-                        </div>
+            <div class="editor">
+                <div class="editor__header">Онлайн счетчик символов</div>
+                <div class="editor__counter">
+                    <div class="editor__block">
+                        <div class="editor__title">символов С ПРОБЕЛАМИ</div>
+                        <div class="editor__count">0</div>
                     </div>
+                    <div class="editor__block">
+                        <div class="editor__title">символов БЕЗ ПРОБЕЛОВ</div>
+                        <div class="editor__count">0</div>
+                    </div>
+                    <div class="editor__block">
+                        <div class="editor__title">кол-во СЛОВ</div>
+                        <div class="editor__count">0</div>
+                    </div>
+                </div>
+                <div class="editor__content">
+                    <textarea class="textarea" name="user-text" rows="10" placeholder="Напечатайте или вставте сюда Ваш текст..."></textarea>
                 </div>
             </div>
         </div>
     </main>
-    <footer class="footer">
-
-    </footer>
-
     <script src="app.js"></script>
 </body>
 </html>

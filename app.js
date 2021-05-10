@@ -1,40 +1,40 @@
+let textarea = document.querySelector('.textarea');
+let counts = document.querySelectorAll('.editor__count');
 
-
-let textarea = document.querySelector('.text-box__area');
-let total = document.querySelector('.chars-counters__value--total');
-let noSpaces = document.querySelector('.chars-counters__value--nospaces');
-let words = document.querySelector('.chars-counters__value--words');
+let countWithSpaces = counts[0];
+let countWithoutSpaces = counts[1];
+let countWords = counts[2];
 
 textarea.addEventListener('input', charsCounter);
 
 function charsCounter() {
-    total.textContent = textarea.value.length;
+    countWithSpaces.textContent = textarea.value.length;
     spacesConter();
     wordsCounter();
 }
 
 function wordsCounter() {
     let chars = [...textarea.value];
-    let wordsCount = 1;
+    let count = (chars[0] && chars[0] !== ' ' && chars[0] !== '\n') ? 1 : 0;
 
     if (chars.length) {
         chars.forEach((char, index) => {
-            if ((chars[index - 1] === ' ' || chars[index - 1] === '\n') && char !== ' ' && char !== '\n') wordsCount++;
+            if ((chars[index - 1] === ' ' || chars[index - 1] === '\n') && char !== ' ' && char !== '\n') count++;
         });
-    } else wordsCount = 0;
+    }
 
-    words.textContent = wordsCount;
+    countWords.textContent = count;
 }
 
 function spacesConter() {
     let chars = [...textarea.value];
-    let nospacesCount = total.textContent;
+    let count = countWithSpaces.textContent;
 
     chars.forEach(char => {
-        if (char === ' ' || char === '\n') nospacesCount--;
+        if (char === ' ' || char === '\n') count--;
     });
 
-    noSpaces.textContent = nospacesCount;
+    countWithoutSpaces.textContent = count;
 }
 
 
